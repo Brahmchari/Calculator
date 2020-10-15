@@ -1,0 +1,147 @@
+﻿<html>
+<title>Calci</title>
+<style>
+
+   body{
+      background-image: url(back1.jpg);
+   }
+   .nav{
+      /* border: 2px solid black; */
+      padding: 5px 50px;
+   }
+   .nav img{
+      /* padding: 0px 0px; */
+      /* border: 2px solid red; */
+      width: 10%;
+      /* padding: 100px 100px; */
+   }
+   .nav h1{
+      position: absolute;
+      top: 30px;
+      right: 422px;
+      font-size: 35px;
+      display: block;
+      width: auto;
+      margin: auto;
+   }
+   .div1{
+      text-align: center;
+      /* padding-left: 33%;
+      padding-right: 32%; */
+      /* padding: 5% 33%; */
+      width: 40%;
+      margin: 0px auto;
+      /* margin-top: 200px; */
+      border: 2px solid rgb(100, 242, 247);
+      border-radius: 10px;
+   }
+   .div1 h1{
+      /* text-align: center;
+      font-size: 50px;
+      width: 33vw; */
+     margin: 30px auto;
+     font-size: 50px;
+   }
+   table{
+      margin: 5px auto;
+   }
+   #display{
+      border: 1px solid chocolate;
+      border-radius: 7px;
+      width: 33vw;
+      padding: 10px 8px;
+      margin: 0px 12px;
+   }
+   .num {
+      color: red
+   }
+   .operator{
+      color: blue;
+      width: 50px;
+      padding: 2px 2px;
+      font-size: 17px;
+      border:1px solid rgb(123, 123, 216);
+      border-radius: 5px;
+   }
+
+   .row td{
+      padding: 10px 30px;
+   }
+   .row td input.num{
+      width: 60px;
+      padding: 4px 4px;
+      color: darkorange;
+      border:1px solid rgb(58, 55, 55);
+      border-radius: 5px;
+   }
+   .row td input.EqualAndClear{
+      width: 60px;
+      padding: 4px 4px;
+      font-size: 20;
+      border:2px solid gray;
+      border-radius: 5px;
+   }
+   
+</style>
+
+<head>
+   <link rel="Icon" href="images.png" type="Images/gif" sizes="20x20">
+
+<body >
+   <div class="nav">
+      <img src="calci.png" alt="icon">
+      <h1>--: Basic Html Css Js Calculator :--</h1>
+   </div>
+   <div class="div1">
+      <h1>Calcululator</h1>
+      <form name="calculator">
+         <table>
+            <tr>
+               <td colspan="4">
+                  <input type="text" name="display" id="display" disabled>
+               </td>
+            </tr>
+            <tr class="row">
+               <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'" class="num"></td>
+               <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'" class="num"></td>
+               <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'" class="num">
+               </td>
+               <td><input type="button" class="operator" name="plus" value="   +   "
+                     onclick="calculator.display.value += '+'" class="operator"></td>
+            </tr>
+            <tr class="row">
+               <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'" class="num">
+               </td>
+               <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'" class="num">
+               </td>
+               <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'" class="num"></td>
+               <td><input type="button" class="operator" name="minus" value="    -   "
+                     onclick="calculator.display.value += '-'" class="operator"></td>
+            </tr>
+            <tr class="row">
+               <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'" class="num">
+               </td>
+               <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'" class="num">
+               </td>
+               <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'" class="num">
+               </td>
+               <td><input type="button" class="operator" name="times" value="    x   "
+                     onclick="calculator.display.value += '*'" class="operator"></td>
+            </tr>
+            <tr class="row">
+               <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"
+                     class="EqualAndClear"></td>
+               <td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'" class="num">
+               </td>
+               <td><input type="button" name="doit" value="="
+                     onclick="calculator.display.value = eval(calculator.display.value)" class="EqualAndClear"></td>
+               <td><input type="button" class="operator" name="div" value="    /   "
+                     onclick="calculator.display.value += '/'" class="operator"></td>
+            </tr>
+         </table>
+      </form>
+   </div>
+</body>
+</head>
+
+</html>
